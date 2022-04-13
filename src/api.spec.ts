@@ -68,7 +68,7 @@ describe("api", () => {
       });
 
       it("should have the correct value", () => {
-        expect(testRes.language).toBe("en-US");
+        expect(testRes.language).toBe("en-US,en;q=0.5");
       });
     });
 
@@ -82,7 +82,9 @@ describe("api", () => {
       });
 
       it("should have the correct value", () => {
-        expect(testRes.software).toBe("Mozilla/5.0");
+        expect(testRes.software).toBe(
+          "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:50.0) Gecko/20100101 Firefox/50.0"
+        );
       });
     });
   });
